@@ -1,0 +1,107 @@
+:root {
+  --text: white;
+  --primary: #00dd00;
+  --success: #1ec31e;
+  --warning: #f5b453;
+  --error: #be4141;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+}
+
+h1 {
+  color: var(--primary);
+  justify-self: center;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+button {
+  color: black;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  background-color: white;
+}
+
+button:hover {
+  background-color: gainsboro;
+  cursor: pointer;
+}
+
+input {
+  accent-color: var(--primary);
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  align-content: center;
+  background-image: url("img/SFONDO.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.panel {
+  display: grid;
+  padding: 1rem;
+  justify-self: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  gap: 1rem;
+  border-radius: 1rem;
+  width: min(calc(100vw - 4rem), 900px);
+}
+
+.logo {
+  justify-self: center;
+}
+.logo img {
+  width: 200px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  /*border-top:2px solid var(--primary);*/
+  background-color: var(--primary);
+}
+
+.cards {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  font-size: 0.8rem;
+  display: grid;
+  gap: 0.2rem;
+  .checkbox {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+    div {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  }
+  .charge-bar {
+    height: 1.3rem;
+    border-radius: 0.2rem;
+  }
+  .charge-bar.green {
+    background-color: var(--success);
+  }
+  .charge-bar.yellow {
+    background-color: var(--warning);
+  }
+  .charge-bar.red {
+    background-color: var(--error);
+  }
+}
